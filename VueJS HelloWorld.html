@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <meta>
+    <meta charset="UTF-8">
+    <title>Hello World in Vue.js</title>
+  </meta>
+
+  <body>
+
+    <div id="hello-world-app">
+      <h1>{{ msg }}</h1>
+    </div>
+
+
+<div id="app-4">
+  <ol>
+    <li v-for="todo in todos">
+      {{ todo.text }}
+    </li>
+  </ol>
+</div>
+
+
+<div id="app-5">
+  <p>{{ message }}</p>
+  <button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+
+
+    <script
+      src="//cdnjs.cloudflare.com/ajax/libs/vue/2.1.6/vue.min.js">
+    </script>
+
+    <script>
+      new Vue({
+        el: "#hello-world-app",
+        data() {
+          return {
+            msg: "Hello World 123 !"
+          }
+        }
+      });
+	  
+	  var app4 = new Vue({
+  el: '#app-4',
+  data: {
+    todos: [
+      { text: '1 Learn JavaScript' },
+      { text: '2 Learn Vue' },
+      { text: '3 Build something awesome' }
+    ]
+  }
+})
+
+
+var app5 = new Vue({
+  el: '#app-5',
+  data: {
+    message: 'Hello Vue.js!'
+  },
+  methods: {
+    reverseMessage: function () {
+      this.message = this.message.split('').reverse().join('')
+    }
+  }
+})	  
+	  
+    </script>
+
+  </body>
+</html>
