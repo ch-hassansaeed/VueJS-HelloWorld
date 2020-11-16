@@ -1,2 +1,3 @@
 # VueJS-HelloWorld
-VueJS HelloWorld which you need to run on Wamp or other apache server
+VueJS HelloWorld 
+you need to run VueJs code on Wamp or other apache server
